@@ -1,3 +1,41 @@
 <ion-view >
-    <h1>Sample</h1>
+    <ion-nav-title>
+        <h4 style="color:#fff; font-weight:600; text-align:left">BeFabb</h4></ion-nav-title>
+    <ion-content>
+        <ion-slide-box show-pager="true" does-continue="true" pager-click="true" auto-play="true" slide-interval="4000">
+            <ion-slide ng-repeat="count in [1,2,3,4]">
+                <img ng-src="img/home_slider/{{count}}.jpg" class="full-image">
+            </ion-slide>
+        </ion-slide-box>
+        <ion-list class="list-card">
+            <ion-item class="item-divider item-button-right">
+                Shop by Category
+                <button class="button button-small button-right button-clear button-assertive">
+                    View All
+                </button>
+
+            </ion-item>
+            <ion-item class="item-avatar-left cate-item" ng-repeat="cat in categories">
+                <img ng-src="{{cat.image}}"/>
+                <h2>
+                    {{cat.name}}
+                </h2>
+                <p>
+                    {{cat.description}}
+                </p>
+
+            </ion-item>
+        </ion-list>
+        <ion-list class="item-body">
+            <ion-item class="item-image padding">
+                <img src="img/footer.jpg">
+            </ion-item>
+            <ion-item>
+                <div style="font-size:10px; text-align:center">
+                    Developed by Pravin
+                </div>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
 </ion-view>
