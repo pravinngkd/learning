@@ -3,6 +3,8 @@
     padding-top:14px;
     padding-bottom: 14px;
 }
-.cate-item{ width:50%; float: left; padding-left: 15px; padding-top: 70px;}
-.cate-item img{ left:50% !important; margin-left:-20px;}
-.cate-item h2{ text-align: center; font-size: 13px;}
+.cate-item{ width:50%; float: left; padding-left: 15px; padding-top: 120px;}
+ion-item.cate-item img{ left:50% !important; margin-left:-45px; border:1px solid #ddd; max-width:90px !important; max-height: 90px !important; }
+.cate-item h2{ text-align: center; font-size: 14px; font-weight: 600}
+.BF-cate-head{ text-align: center; padding-right: 15px;}
+.item-body.disable-user-behavior{ padding: 0;}

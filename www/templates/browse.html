@@ -5,7 +5,7 @@
     <ion-content>
         <ion-refresher pulling-text="Refresh" on -refresh="doRefresh()"></ion-refresher>
          <ion-item class="item-image padding">
-                <img src="img/footer.jpg">
+                <img src="img/home_slider/1.jpg">
          </ion-item>
 
         <ion-list>
@@ -17,7 +17,7 @@
                 <p>
                     {{product.categories[0]}}<br><span ng-bind-html="product.price_html"></span>
                 </p>
-                <button class="button button-assertive">
+                <button class="button button-assertive" ng-click="addToCart(product)">
                     <i class="icon ion-android-cart"></i>
                       
                 </button>
