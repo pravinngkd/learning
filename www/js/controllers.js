@@ -99,4 +99,35 @@ angular.module('starter.controllers', [])
 
       $rootScope.cartCount = $localStorage.cart.length;
     }
+
+
 })
+
+
+$scope.showCartModal = function(){
+
+  $scope.cartItems = $localStorage.cart; 
+  if(!$scope.cartItems || $scope.cartItems.length == 0){
+    console.log('No Items');
+    alert("No Items");
+    return;
+
+  }
+  $scope.costSum = 0;
+
+  $scope.cartItems.forEach(function(element, index){
+    $scope.costSum += Number(element.price);
+  });
+
+  $scope.costSum = $scope.costSum.toFixed(2);
+
+  $scope.modal = {};
+
+  $ionicModal.fromTemplateUrl('template/cartModal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal){
+    $scope.modal = modal;
+    $scope.modal.show();
+  })
+}
