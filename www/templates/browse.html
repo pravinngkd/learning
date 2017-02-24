@@ -4,12 +4,21 @@
     <ion-content>
         <ion-refresher pulling-text="Refresh" on-refresh="doRefresh()"></ion-refresher>
         <ion-list>
-            <div class="item item-thumbnail-left item-button-right" ng-repeat="product in products"  ui-sref="app.product({productID : product.id})">
+           <!-- <div class="list search-sec">
+                <label class="item item-input">
+                    <input type="search" placeholder="Search here..." ng-model="query">
+                </label>
+            </div>-->
+          
+            
+            <div class="item item-thumbnail-left item-button-right browse-list" ng-repeat="product in products"  ui-sref="app.product({productID : product.id})">
+                
                 <img ng-src="{{product.featured_src}}">
                 <h2>{{product.title}}</h2>
                 <p>{{product.categories[0]}}<br/><span ng-bind-html='product.price_html'></span></p>
-                <button class="button button-assertive" ng-click="addToCart(product); $event.stopPropagation();">
+                <button class="button button-energized cart-button-page" ng-click="addToCart(product); $event.stopPropagation();">
                     <i class="icon ion-android-cart"></i>
+
                 </button>
             </div>
             

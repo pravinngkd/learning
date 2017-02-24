@@ -411,7 +411,7 @@ angular.module('starter.controllers', [])
   
   $scope.login = function(userData){
     
-    $http.get('http://samarth.cloudapp.net/api/auth/generate_auth_cookie/?insecure=cool&username='+userData.username+'&password='+userData.password)
+    $http.get('http://befabb.com/dev/api/auth/generate_auth_cookie/?insecure=cool&username='+userData.username+'&password='+userData.password)
     .then(function(response){
       console.log(response);
       

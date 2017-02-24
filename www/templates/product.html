@@ -20,7 +20,7 @@
                         <p><span ng-repeat="category in product.categories">{{category}} | </span></p>
                     </div>
                     <div class="col-50">
-                        <button class="button button-positive button-block" ng-click="addToCart(product)">Add To Cart</button>    
+                        <button class="button button-positive button-block add-cart-main" ng-click="addToCart(product)"><i class="ion-android-cart"></i>Add To Cart</button>    
                     </div>
                 </div>
                 <p ng-bind-html="product.description"> </p>
@@ -34,10 +34,10 @@
                         <h2>Price </h2>
                         <h2 ng-bind-html="product.price_html"></h2>
                     </div>
-                    <div class="col-50">
+                    <!--<div class="col-50">
                         <h2>Average Rating</h2> 
                         <h2>{{product.average_rating}}</h2>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>

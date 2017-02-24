@@ -11,10 +11,10 @@
         <ion-list class="list-card">
             <ion-item class="item-dividier item-button-right">
                 Shop By Category
-                <button class="button button-small button-clear button-assertive" ui-sref="app.categories">View All</button>
+                <!--<button class="button button-small button-clear button-assertive" ui-sref="app.categories">View All</button>-->
             </ion-item>
             <ion-item class="item-avatar-left" ng-repeat="cat in mainCategories" ui-sref="app.category({categoryID: cat.slug})">
-                <img ng-src="{{cat.image || 'http://loremflickr.com/64/64/'+cat.name}}"/>
+                <img class="cart-home" ng-src="{{cat.image || 'http://loremflickr.com/64/64/'+cat.name}}"/>
                 <h2>{{cat.name}}</h2>
                 <p>{{cat.description}}</p>
             </ion-item>
@@ -24,7 +24,7 @@
                 <img src="img/footer_banner.png"/>
             </ion-item>
             <ion-item>
-                <div style="font-size:10px;"><center>Developed by Samarth Agarwal</center></div>
+                <div style="font-size:10px;"><center>Developed by Pravin Gaikwad</center></div>
             </ion-item>
         </ion-list>
     <ion-content>
