@@ -1,5 +1,6 @@
 angular.module('starter.controllers', [])
 
+
 .controller('AppCtrl', function($scope, WC, $localStorage, $rootScope, $ionicModal, $state){
   
   $scope.$on('$ionicView.enter', function(e) {
